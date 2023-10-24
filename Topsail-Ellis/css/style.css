@@ -1,0 +1,153 @@
+body { 
+    background: url(../images/pexels-meng-yuan-18481750.jpg) no-repeat center center fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 { 
+    color: #008391;
+    font-family: 'Righteous', sans-serif;
+    
+}
+
+nav { 
+    background-color: #008391;
+    font-size: 20px;
+    width: auto;
+}
+
+#links { 
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    
+
+}
+
+#links a { 
+    text-decoration: none;
+    color:#CFCAB4;
+}
+
+.main-content { 
+    background-color: #CFCAB4;
+    font-size: 1.5em;
+    padding: 10px 10px 0 10px;
+}
+
+.main-content img { 
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main-content h1 { 
+    background: url(../images/pexels-pok-rie-3233367.jpg) no-repeat center center fixed;
+    margin: -10px -10px 0px -10px;
+    height: 100px;
+    width: auto;
+    padding: 15px 10px 10px 10px;
+    border: 0px 4px 4px 4px;
+    border-style: ridge;
+    border-color: #008391;
+}
+
+#checkbox { 
+    display: none;
+}
+
+#checkbox:checked ~ nav { 
+    max-height: 15em;
+}
+
+.menu-icon { 
+    display: none;
+}
+
+a { 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #B62C7D;
+    padding: 5px 5px 0 0;
+}
+
+a:hover { 
+    text-decoration: underline;
+}
+
+h3 { 
+    color: #B62C7D;
+    font-family: 'Righteous', sans-serif;
+}
+
+.inline-links { 
+    text-transform: none;
+}
+
+.footer-content { 
+    background-color: #008391;
+    font-size: .8em;
+    text-align: center;
+}
+
+i { 
+    padding: 10px;
+}
+
+.group-links { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.group-links a { 
+    padding: 10px;
+}
+
+
+
+
+
+/* Hamburger Menu */
+
+@media screen and (max-width: 800px) {
+    .menu-icon { 
+        position: relative;
+        display: block;
+        padding: 5px;
+        color: #CFCAB4;
+        font-size: 2em;
+        background-color: #008391;
+    }
+
+    .menu-icon:hover { 
+        cursor: pointer;
+    }
+
+    #links {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    #links a { 
+        padding: 10px;
+        background: linear-gradient(to right, #B62C7D 50%, #008391 50%);
+        background-size: 200% 100%;
+        background-position: bottom right;
+        transition: all .7s ease-out;
+    }
+
+    #links a:hover { 
+        background-position: bottom left;
+        width: 100%;
+    }
+
+    nav { 
+		list-style-type: none;
+		max-height: 0em;  /* Nav should be collapsed by default */
+        overflow: hidden; /*hides contents when collapsed */
+		transition: ease-in-out .5s;
+	}
+
+    .main-content h1 { 
+        padding: 15px 10px 20px 10px;
+    }
+}

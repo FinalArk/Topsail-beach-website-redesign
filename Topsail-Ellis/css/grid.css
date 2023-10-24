@@ -1,0 +1,27 @@
+@supports (grid-area: auto) {
+
+    
+    @media screen and (min-width: 600px) { /* On screens larger than 600px, we can change from a two-column layout to three columns */
+        .site {
+
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 1fr; /* Set three column layout with third column twice as large as the rest */
+            grid-template-areas: 
+                    ". header header"
+                    ". main main"
+                    ". footer footer";
+
+            .header-content {
+                grid-area: header;
+            }
+        
+            .main-content { 
+                grid-area: main;
+            }
+        
+            .footer-content { 
+                grid-area: footer;
+            }
+    }
+    }
+}
